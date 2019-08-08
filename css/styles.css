@@ -1,0 +1,547 @@
+@font-face {
+    font-family: 'railway';
+    src: url('../fonts/railway.woff2') format('woff2'),
+        url('../fonts/railway.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* I'm using REM unit inside this project
+   ex : 1 rem = 10px
+   1.6rem = 16px
+*/
+html {
+    font-size: 62.5%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    background-color: #3D3D3DFF;
+    font-family: "railway", "Open Sans", Arial;
+    text-shadow: 0 1px 0 #fff, 0 1px 0 #fff, 0 1px 0 #fff;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FFD800FF;
+    text-align: center;
+    color: #000;
+}
+
+header p {
+    font-size: 7rem;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 3rem;
+}
+
+
+header #container_logo {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    align-items: baseline;
+}
+
+header #logo {
+    width: 7%;
+    padding: 1rem;
+    min-width: 65px;
+}
+
+header #logo img {
+    width: 100%;
+}
+
+/****************** SLIDER ****************** */
+
+#slider {
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#container_slider {
+    background-color: #FFD800FF;
+    height: 80%;
+    background-image: url("../img/bg.jpg");
+}
+
+#texts {
+    position: absolute;
+    bottom: 0;
+    height: 60%;
+    width: 100%;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 0 #000000, 0 2px 0 #000000, 0 2px 0 #000000;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,000000+100&0+0,1+100 */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#000000', GradientType=0);
+    /* IE6-9 */
+}
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#slider img {
+    width: 100%;
+}
+
+#arrow_left,
+#arrow_right,
+#play_pause {
+    font-size: 6rem;
+    text-align: center;
+}
+
+/*******************  GO ****************** */
+
+#container_go {
+    background-color: #0C0C0CFF;
+    width: 100%;
+    padding: 1rem 0;
+    height: 20%;
+}
+
+#go {
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 5rem;
+    font-size: 4rem;
+    padding: 2rem;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 15%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 15%;
+
+}
+
+.pulsate-bck {
+    -webkit-animation: pulsate-bck 2s ease-in-out infinite both;
+    animation: pulsate-bck 2s ease-in-out infinite both;
+}
+
+@-webkit-keyframes pulsate-bck {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes pulsate-bck {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+/*******************  MAP ****************** */
+
+#container_map {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #3D3D3DFF;
+
+    align-items: center;
+    background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px;
+    background-color: #222;
+    background-size: 16px 16px;
+}
+
+#map_area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#container_map h2 {
+    text-align: center;
+    color: #FFF;
+    padding: 2rem 0;
+    font-size: 5rem;
+    text-shadow: 0 2px 0 #000000, 0 2px 0 #000000, 0 2px 0 #000000;
+
+}
+
+#map {
+    width: 50%;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+#mapid {
+    background-color: #FFF;
+    width: 100%;
+    height: 70vh;
+    margin: 0 auto;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.fa-angle-double-down {
+    padding: 1rem;
+    animation: arrow 1s ease-in-out infinite alternate;
+}
+@keyframes arrow {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.2;
+    }
+}
+
+/*********** STEPS UNTIL TIMER ***************/
+
+#steps {
+    width: 50%;
+    display: none;
+    padding: 0 2rem;
+}
+
+#bookedMsg {
+    display: none;
+}
+
+/* STEP 1 INFOS */
+
+#step_infos,
+#step_booking {
+    padding: 1rem;
+    background-color: #d2d2d2;
+}
+
+#booking_btn {
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #000;
+    border-radius: 5rem;
+    font-size: 4rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: 40%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 25%;
+    text-shadow: none;
+
+}
+
+table {
+    width: 100%;
+    font-size: 2rem;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 1.5;
+}
+
+th {
+    text-align: left;
+    width: 40%;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 4rem;
+    color: #000;
+}
+
+#status {
+    font-weight: 900;
+}
+
+
+/* STEP 2 BOOKING */
+#step_booking h2 {
+    font-weight: bold;
+    font-size: 4rem;
+    color: #000;
+    text-align: center;
+    text-shadow: 0 2px 0 #fff, 0 2px 0 #fff, 0 2px 0 #fff;
+}
+
+#inputMsg {
+    display: block;
+    font-size: 1.2rem;
+}
+
+/* STEP 3 TIMER */
+
+#step_timer {
+    padding: 1rem;
+    background-color: #54BC4C;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#countdown {
+    font-size: 5rem;
+}
+
+/*******************  CANVAS ****************** */
+
+form {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    display: flex;
+}
+
+input {
+    width: 75%;
+    height: 40px;
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+#inputs {
+    flex: 2;
+    text-align: center;
+    align-self: center;
+}
+
+#sign {
+    flex: 1;
+    text-align: center;
+}
+
+#canvas {
+    margin: 0 auto;
+    border: 1px solid #000;
+    display: block;
+    background-color: #fff;
+}
+
+#clear_btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 50%;
+}
+
+#confirm_btn {
+    border: none;
+    cursor: pointer;
+    background-color: #000;
+    border-radius: 5rem;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    color: #fff;
+    display: inline-block;
+    width: 75%;
+    text-align: center;
+    text-shadow: none;
+    font-family: "railway", "Open Sans", Arial;
+}
+
+/******************* FOOTER *******************/
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    flex: auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 1px 0 #000, 0 1px 0 #000, 0 1px 0 #000;
+}
+
+/***************  MEDIA QUERIES  *************/
+
+@media all and (min-width:1600px) {
+    header #logo {
+        width: 10%;
+    }
+
+    header p {
+        font-size: 9rem;
+    }
+
+    header h2 {
+        font-size: 4rem;
+    }
+
+    #go {
+        border-radius: 8rem;
+        font-size: 5rem;
+        padding: 2rem;
+        width: 30%;
+    }
+}
+
+@media all and (min-width : 1024px) and (max-width:1600px) {
+    #go {
+        padding: 1rem;
+    }
+
+    #map h2 {
+        font-size: 2.2rem;
+
+    }
+}
+
+@media all and (min-width : 768px) and (max-width:1024px) {
+
+    #container_map h2,
+    #texts,
+    caption,
+    #booking_btn {
+        font-size: 3rem;
+    }
+
+    #go {
+        top: 30%;
+        font-size: 3rem;
+        padding: 1rem;
+        width: 25%;
+    }
+
+
+}
+
+@media all and (min-width : 320px) and (max-width:768px) {
+
+    #container_go {
+        margin-top: 10%;
+    }
+
+    #texts,
+    #go,
+    #container_map h2,
+    caption,
+    #step_booking h2 {
+        font-size: 2rem;
+    }
+
+    #go {
+        width: 30%;
+    }
+
+    #mapid {
+        font-size: 2rem;
+    }
+
+    #confirm_btn {
+        width: 55%;
+    }
+
+    table {
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    #booking_btn {
+        font-size: 2rem;
+        width: 30%;
+        padding: 2rem;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
+
+    #arrow_left,
+    #arrow_right,
+    #play_pause {
+        font-size: 4.5rem;
+        text-align: center;
+    }
+}
+    
+    @media all and (min-width : 320px) and (max-width: 1024px) {
+
+        #map_area, form {
+            flex-direction: column;
+        }
+
+        #steps {
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        #map {
+            width: 80%;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        #mapid {
+            background-color: #FFF;
+            width: 100%;
+            height: 35vh;
+            margin: 0 auto;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        #slider {
+            width: 100%;
+        }
+    }
